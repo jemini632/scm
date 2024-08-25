@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content,title,script)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}">Base Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link/>
+</head>
+<body>
+    <div data-th-replace="(~{navbar:: navbar})">
+
+    </div>
+   
+    <div>
+        <section class="p-4" data-th-replace="${content}"></section>
+    </div>
+
+    <footer class="p-4" >This is the footer of my project</footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <th:block data-th-replace="${script}"></th:block>
+</body>
+</html>
